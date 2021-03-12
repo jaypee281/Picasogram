@@ -28,7 +28,7 @@ export default function ImageList() {
             </span>
             </div>
             <div className="image-buttons">
-            <img className="like-button" alt={i.like?"Liked":"Not Liked"} src=""></img>
+            <button className={i.like?"like-button":"unlike-button"} >{i.like?"Liked":"Not Liked"} </button>
             <button className="delete-button"
               onClick={() =>
                 dispatch({ type: "SET_CURRENT_IMAGE", payload: i })

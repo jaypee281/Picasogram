@@ -35,8 +35,17 @@
      margin: 0 0 15px;
  
  }
+ .unlike-button{
+     margin: 15px 50px 15px 120px;
+     border-radius: 12px;
+     padding: 10px;
+ }
  .like-button{
      margin: 15px 50px 15px 120px;
+     background-color: crimson;
+     color: white;
+     border-radius: 12px;
+     padding: 10px;
  }
  
  .delete-button{
