@@ -14,7 +14,8 @@ export default function ImageList() {
           <li
             key={i.id}
             className=""
-          >
+          > 
+          <div>
             <span
               onDoubleClick={ () => {
 
@@ -25,15 +26,17 @@ export default function ImageList() {
              <img class="photo" src={i.image}></img>
 
             </span>
-            <img alt={i.like?"Liked":"Not Liked"} src=""></img>
-            <button
+            </div>
+            <div className="image-buttons">
+            <img className="like-button" alt={i.like?"Liked":"Not Liked"} src=""></img>
+            <button className="delete-button"
               onClick={() =>
                 dispatch({ type: "SET_CURRENT_IMAGE", payload: i })
               }
             >
               Change Image
             </button>
-            <button
+            <button className="delete-button"
               onClick={ () => {
 
                 dispatch({ type: "REMOVE_IMAGE", payload: i });
@@ -41,6 +44,7 @@ export default function ImageList() {
             >
               Delete Image
             </button>
+            </div>
           </li>
         ))}
       </ul>
